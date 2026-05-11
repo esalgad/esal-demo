@@ -5,22 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & GitHub Social Compatibility -->
-    <!-- EDIT: YOUR NAME & DESCRIPTION FOR GOOGLE/SOCIAL MEDIA -->
     <title>Esteban Salgado | Creative Technologist</title>
     <meta name="description" content="Creative Technologist & Brand Strategist specializing in high-fidelity design and leadership.">
     <meta property="og:title" content="Esteban Salgado | Creative Technologist">
     <meta property="og:description" content="Creative Technologist & Brand Strategist.">
-    <meta property="og:type" content="www.velesi.com">
+    <meta property="og:type" content="website">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter (Proxy for Telegraf) & Geist Mono -->
+    <!-- Google Fonts: Geist Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
+        /* CUSTOM FONT FROM REPOSITORY */
+        @font-face {
+            font-family: 'PP Neue Machina';
+            src: url('https://raw.githubusercontent.com/esalgad/esal-demo/main/assets/fonts/PP%20Neue%20Machina/PPNeueMachina-InktrapRegular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
         :root {
             --bg-color: #f8f7f2; 
             --text-color: #121212;
@@ -29,7 +37,6 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            /* Body text: Geist Mono */
             font-family: 'Geist Mono', monospace;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
@@ -37,11 +44,10 @@
             font-size: 14px;
         }
 
-        /* Titles: Telegraf (Inter proxy) Regular */
         .font-title {
-            font-family: 'Inter', sans-serif;
+            font-family: 'PP Neue Machina', sans-serif;
             font-weight: 400; 
-            letter-spacing: -0.04em;
+            letter-spacing: -0.03em;
         }
 
         /* VIDEO GRAIN OVERLAY */
@@ -95,11 +101,21 @@
             transform: scaleX(1);
             transform-origin: bottom left;
         }
+
+        /* Portrait Animation - Grayscale to Color + Scale */
+        .portrait-container {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+            filter: grayscale(1);
+        }
+        .portrait-container:hover {
+            transform: scale(1.02);
+            filter: grayscale(0);
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body class="selection:bg-neutral-200">
 
-    <!-- The Animated Video Grain Layer -->
     <div class="grain-container">
         <video 
             class="grain-video" 
@@ -109,7 +125,6 @@
             playsinline
             poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         >
-            <!-- GRAIN TEXTURE SOURCE -->
             <source src="https://framerusercontent.com/assets/qWyXu1xSHmvdX7pnlYJNwwLQo0.mp4" type="video/mp4">
         </video>
     </div>
@@ -117,8 +132,7 @@
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full z-50 bg-[#f8f7f2]/40 backdrop-blur-md border-b border-neutral-100">
         <div class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-            <!-- EDIT: YOUR LOGO TEXT -->
-            <a href="#" class="font-title text-xl font-semibold tracking-tighter hover:opacity-50 transition-opacity">
+            <a href="#" class="font-title text-xl font-semibold tracking-tighter hover:opacity-50 transition-opacity uppercase">
                 ESTEBAN SALGADO
             </a>
             <div class="flex space-x-8 text-[9px] uppercase tracking-[0.2em] text-neutral-400 font-bold">
@@ -133,23 +147,19 @@
         
         <!-- Hero Section -->
         <section id="home" class="max-w-5xl reveal" style="animation-delay: 0.1s;">
-            <!-- EDIT: HERO TITLE -->
-            <h1 class="font-title text-6xl md:text-8xl lg:text-[7rem] leading-[0.85] mb-12 tracking-tighter">
+            <h1 class="font-title text-6xl md:text-8xl lg:text-[7rem] leading-[0.85] mb-12 tracking-tighter uppercase">
                 Art Director <br/>
                 Creative Technologist
             </h1>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                <!-- EDIT: HERO DESCRIPTION -->
                 <p class="text-lg md:text-xl text-neutral-500 leading-relaxed font-normal tracking-tight">
                     Bridging the gap between creative vision and business strategy for global brands through high-fidelity leadership.
                 </p>
                 <div class="space-y-6">
-                    <!-- EDIT: SHORT BIO -->
                     <p class="text-sm text-neutral-400 leading-relaxed font-normal">
                         With over a decade of leadership in NYC, I define the visual future of brands at the intersection of tech and culture. Currently at Velesi Branding.
                     </p>
                     <div class="flex space-x-3">
-                        <!-- EDIT: BADGES -->
                         <span class="px-3 py-1 border border-neutral-200 text-[8px] uppercase tracking-[0.2em] text-neutral-400 font-bold rounded-sm">Available 2024</span>
                         <span class="px-3 py-1 border border-neutral-200 text-[8px] uppercase tracking-[0.2em] text-neutral-400 font-bold rounded-sm">Global Remote</span>
                     </div>
@@ -160,7 +170,6 @@
         <!-- Expertise Section -->
         <section id="expertise" class="mt-32 reveal" style="animation-delay: 0.3s;">
             <div class="border-t border-neutral-200 pt-16 grid grid-cols-1 md:grid-cols-3 gap-16">
-                <!-- EDIT: COLUMN 1 -->
                 <div class="space-y-6">
                     <h3 class="text-[9px] uppercase tracking-[0.4em] text-neutral-400 font-bold">Directives</h3>
                     <ul class="text-base space-y-3">
@@ -170,7 +179,6 @@
                         <li class="link-hover cursor-default text-neutral-600 hover:text-black">Product Vision</li>
                     </ul>
                 </div>
-                <!-- EDIT: COLUMN 2 -->
                 <div class="space-y-6">
                     <h3 class="text-[9px] uppercase tracking-[0.4em] text-neutral-400 font-bold">Leadership</h3>
                     <ul class="text-base space-y-3">
@@ -180,7 +188,6 @@
                         <li class="link-hover cursor-default text-neutral-600 hover:text-black">Scale Strategy</li>
                     </ul>
                 </div>
-                <!-- EDIT: COLUMN 3 -->
                 <div class="space-y-6">
                     <h3 class="text-[9px] uppercase tracking-[0.4em] text-neutral-400 font-bold">Experience</h3>
                     <ul class="text-base space-y-3">
@@ -197,18 +204,15 @@
         <section id="about" class="mt-32 reveal" style="animation-delay: 0.4s;">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
                 <div class="lg:col-span-4">
-                    <!-- EDIT: PORTRAIT IMAGE URL -->
-                    <div class="aspect-[4/5] max-w-[200px] bg-neutral-100 overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 shadow-sm">
-                        <img src="https://github.com/esalgad/esal-demo/blob/main/assets/images/ES-portrait-v1.jpg?auto=format&fit=crop&q=80&w=800" alt="Portrait" class="w-full h-full object-cover">
+                    <div class="portrait-container aspect-[4/5] max-w-[200px] bg-neutral-100 overflow-hidden rounded-sm shadow-sm">
+                        <img src="https://raw.githubusercontent.com/esalgad/esal-demo/main/assets/images/ES-portrait-v1.jpg" alt="Esteban Salgado" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="lg:col-span-8 flex flex-col justify-center">
                     <h3 class="text-[9px] uppercase tracking-[0.4em] text-neutral-400 font-bold mb-10">The Narrative</h3>
-                    <!-- EDIT: QUOTE OR PHILOSOPHY -->
                     <p class="font-title text-4xl md:text-6xl leading-[1.1] mb-10 tracking-tight">
                         "Great design is the result of strategic thinking and uncompromising execution."
                     </p>
-                    <!-- EDIT: EXTENDED BIO -->
                     <div class="space-y-6 text-sm text-neutral-500 font-normal leading-relaxed max-lg">
                         <p>My career has been defined by a refusal to specialize in just one medium. I treat a mobile app with the same typographic reverence as a physical exhibition.</p>
                         <p>Currently based in a hybrid capacity, helping founders articulate their "why" through uncompromising visual excellence.</p>
@@ -222,13 +226,11 @@
             <div class="border-t border-neutral-200 pt-16 flex flex-col md:flex-row justify-between items-start gap-16">
                 <div class="max-w-2xl">
                     <h3 class="text-[9px] uppercase tracking-[0.4em] text-neutral-400 font-bold mb-8">Collaborate</h3>
-                    <!-- EDIT: EMAIL ADDRESS -->
-                    <a href="mailto:hello@yourname.com" class="font-title text-2xl md:text-3xl lg:text-4xl tracking-tighter hover:text-neutral-400 transition-colors break-all leading-none">
-                        hello@yourname.com
+                    <a href="mailto:hello@enriquesalgado.com" class="font-title text-2xl md:text-3xl lg:text-4xl tracking-tighter hover:text-neutral-400 transition-colors break-all leading-none">
+                        hello@enriquesalgado.com
                     </a>
                 </div>
                 <div class="flex flex-col gap-6 pt-2">
-                    <!-- EDIT: SOCIAL LINKS -->
                     <a href="#" class="text-sm link-hover">LinkedIn</a>
                     <a href="#" class="text-sm link-hover">Instagram</a>
                     <a href="#" class="text-sm link-hover">Read.cv</a>
@@ -242,12 +244,10 @@
     <!-- Footer -->
     <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-neutral-100 text-neutral-300 text-[8px] tracking-[0.4em] uppercase flex flex-col md:flex-row justify-between items-center gap-8 font-bold">
         <div class="flex items-center gap-4">
-            <!-- EDIT: STATUS INDICATOR -->
             <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
             <span>Available for Q3 2026</span>
         </div>
         <div class="flex space-x-16">
-            <!-- EDIT: COPYRIGHT NAME -->
             <span>© 2026 ESTEBAN SALGADO</span>
             <a href="#home" class="text-black">Top ↑</a>
         </div>
