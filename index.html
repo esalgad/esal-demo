@@ -31,11 +31,11 @@
         /* Titles: Telegraf (Inter proxy) Regular */
         .font-title {
             font-family: 'Inter', sans-serif;
-            font-weight: 400; /* Regular as requested */
+            font-weight: 400; /* Regular weight */
             letter-spacing: -0.04em;
         }
 
-        /* VIDEO GRAIN OVERLAY */
+        /* VIDEO GRAIN OVERLAY - Reverted to High-Fidelity MP4 Version */
         .grain-container {
             position: fixed;
             top: 0;
@@ -46,13 +46,14 @@
             pointer-events: none;
             overflow: hidden;
             mix-blend-mode: multiply;
-            opacity: 0.35; 
+            opacity: 0.6; 
         }
 
         .grain-video {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: contrast(110%);
         }
 
         /* Reveal Animation */
@@ -91,7 +92,7 @@
 </head>
 <body class="selection:bg-neutral-200">
 
-    <!-- The Animated Video Grain Layer -->
+    <!-- The Animated Video Grain Layer (Restored) -->
     <div class="grain-container">
         <video 
             class="grain-video" 
@@ -119,11 +120,11 @@
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-6 pt-40 pb-24">
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-12">
         
         <!-- Hero Section -->
         <section id="home" class="max-w-5xl reveal" style="animation-delay: 0.1s;">
-            <h1 class="font-title text-6xl md:text-8xl lg:text-[9rem] leading-[0.85] mb-16 tracking-tighter">
+            <h1 class="font-title text-6xl md:text-8xl lg:text-[9rem] leading-[0.85] mb-12 tracking-tighter">
                 Creative <br/>
                 Director
             </h1>
@@ -144,7 +145,7 @@
         </section>
 
         <!-- Expertise Section -->
-        <section id="expertise" class="mt-56 reveal" style="animation-delay: 0.3s;">
+        <section id="expertise" class="mt-32 reveal" style="animation-delay: 0.3s;">
             <div class="border-t border-neutral-200 pt-16 grid grid-cols-1 md:grid-cols-3 gap-16">
                 <div class="space-y-6">
                     <h3 class="text-[9px] uppercase tracking-[0.4em] text-neutral-400 font-bold">Directives</h3>
@@ -177,7 +178,7 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="mt-56 reveal" style="animation-delay: 0.4s;">
+        <section id="about" class="mt-32 reveal" style="animation-delay: 0.4s;">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
                 <div class="lg:col-span-4">
                     <div class="aspect-[4/5] max-w-[200px] bg-neutral-100 overflow-hidden rounded-sm grayscale hover:grayscale-0 transition-all duration-1000 shadow-sm">
@@ -189,7 +190,7 @@
                     <p class="font-title text-4xl md:text-6xl leading-[1.1] mb-10 tracking-tight">
                         "Great design is the result of strategic thinking and uncompromising execution."
                     </p>
-                    <div class="space-y-6 text-sm text-neutral-500 font-normal leading-relaxed max-w-lg">
+                    <div class="space-y-6 text-sm text-neutral-500 font-normal leading-relaxed max-lg">
                         <p>My career has been defined by a refusal to specialize in just one medium. I treat a mobile app with the same typographic reverence as a physical exhibition.</p>
                         <p>Currently based in a hybrid capacity, helping founders articulate their "why" through uncompromising visual excellence.</p>
                     </div>
@@ -198,15 +199,15 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="mt-56 mb-32 reveal">
-            <div class="border-t-2 border-black pt-20 flex flex-col md:flex-row justify-between items-start gap-16">
+        <section id="contact" class="mt-32 mb-8 reveal">
+            <div class="border-t border-neutral-200 pt-16 flex flex-col md:flex-row justify-between items-start gap-16">
                 <div class="max-w-2xl">
-                    <h3 class="text-[9px] uppercase tracking-[0.4em] text-neutral-400 font-bold mb-10">Collaborate</h3>
-                    <a href="mailto:hello@yourname.com" class="font-title text-5xl md:text-7xl lg:text-8xl tracking-tighter hover:text-neutral-400 transition-colors break-all leading-none">
+                    <h3 class="text-[9px] uppercase tracking-[0.4em] text-neutral-400 font-bold mb-8">Collaborate</h3>
+                    <a href="mailto:hello@yourname.com" class="font-title text-2xl md:text-3xl lg:text-4xl tracking-tighter hover:text-neutral-400 transition-colors break-all leading-none">
                         hello@yourname.com
                     </a>
                 </div>
-                <div class="flex flex-col gap-6 pt-4">
+                <div class="flex flex-col gap-6 pt-2">
                     <a href="#" class="text-sm link-hover">LinkedIn</a>
                     <a href="#" class="text-sm link-hover">Instagram</a>
                     <a href="#" class="text-sm link-hover">Read.cv</a>
